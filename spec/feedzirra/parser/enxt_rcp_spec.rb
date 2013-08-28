@@ -6,9 +6,7 @@ describe Feedzirra::Parser::EnxtRCP do
       Feedzirra::Parser::EnxtRCP.should be_able_to_parse(sample_enxt_rcp_feed)
     end
 
-    # This is known behavior, since RCP is an RSS feed.
-    # The order the feeds are listed in Feed.feed_classes is important
-    it "should return true for an RSS feed" do
+    it "should return false for an RSS feed" do
       Feedzirra::Parser::EnxtRCP.should_not be_able_to_parse(sample_rss_feed)
     end
 
