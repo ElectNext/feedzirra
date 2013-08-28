@@ -16,5 +16,8 @@ module Feedzirra
     autoload :AtomEntry,           'feedzirra/parser/atom_entry'
     autoload :AtomFeedBurner,      'feedzirra/parser/atom_feed_burner'
     autoload :AtomFeedBurnerEntry, 'feedzirra/parser/atom_feed_burner_entry'
+
+    autoload :EnxtRCP,                'feedzirra/parser/enxt_rcp'
+    autoload :EnxtRCPEntry,           'feedzirra/parser/enxt_rcp_entry'
   end
 end

@@ -66,7 +66,11 @@ end
 
 def sample_google_docs_list_feed
   load_sample("GoogleDocsList.xml")
-end       
+end
+
+def sample_enxt_rcp_feed
+  load_sample("enxt_real_clear_politics.xml")
+end
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
