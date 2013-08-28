@@ -10,3 +10,5 @@ coverage/
 .bundle
 *.swp
 *.swo
+.idea
+
