@@ -44,6 +44,7 @@ module Feedzirra
     # === Returns
     # A array of class names.
     def self.feed_classes
+      # Custom Enxt classes need to be loaded first
       @feed_classes ||= [Feedzirra::Parser::EnxtRCP, Feedzirra::Parser::RSSFeedBurner, Feedzirra::Parser::GoogleDocsAtom, Feedzirra::Parser::AtomFeedBurner, Feedzirra::Parser::Atom, Feedzirra::Parser::ITunesRSS, Feedzirra::Parser::RSS]
     end
     
