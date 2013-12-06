@@ -6,13 +6,6 @@ describe Feedzirra::Parser::EnxtRCPEntry do
     @entry = Feedzirra::Parser::EnxtRCP.parse(sample_enxt_rcp_feed).entries.first
   end
 
-  after(:each) do
-    # We change the title in one or more specs to test []=
-    if @entry.title != "Feeling Powerless All Around"
-      @entry.title = Feedzirra::Parser::EnxtRCP.parse(sample_enxt_rcp_feed).entries.first.title
-    end
-  end
-
   it "should parse the title" do
     @entry.title.should == "Feeling Powerless All Around"
   end
