@@ -19,5 +19,8 @@ module Feedzirra
 
     autoload :EnxtRCP,                'feedzirra/parser/enxt_rcp'
     autoload :EnxtRCPEntry,           'feedzirra/parser/enxt_rcp_entry'
+
+    autoload :EnxtDMN,                'feedzirra/parser/enxt_dmn'
+    autoload :EnxtDMNEntry,           'feedzirra/parser/enxt_dmn_entry'
   end
 end
