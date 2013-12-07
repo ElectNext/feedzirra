@@ -7,6 +7,10 @@ describe Feedzirra::Parser::EnxtDMN do
         Feedzirra::Parser::EnxtDMN.should be_able_to_parse(sample_enxt_dmn_feed)
       end
 
+      it "should return false for an RSS feed" do
+        Feedzirra::Parser::RSS.should be_able_to_parse(sample_rss_feed)
+      end
+
       it "should return false for an atom feed" do
         Feedzirra::Parser::EnxtDMN.should_not be_able_to_parse(sample_atom_feed)
       end
@@ -46,20 +50,12 @@ describe Feedzirra::Parser::EnxtDMN do
 
   context "blog feed" do
     describe "#will_parse?" do
-      it "should return true for an DMN feed" do
+      it "should return true for an DMN blog feed" do
         Feedzirra::Parser::EnxtDMN.should be_able_to_parse(sample_enxt_dmn_blog_feed)
-      end
-
-      it "should return false for an atom feed" do
-        Feedzirra::Parser::EnxtDMN.should_not be_able_to_parse(sample_atom_feed)
-      end
-
-      it "should return false for an rss feedburner feed" do
-        Feedzirra::Parser::EnxtDMN.should_not be_able_to_parse(sample_rss_feed_burner_feed)
       end
     end
 
-    describe "parsing DMN feed" do
+    describe "parsing DMN blog feed" do
       before(:each) do
         @feed = Feedzirra::Parser::EnxtDMN.parse(sample_enxt_dmn_blog_feed)
       end
