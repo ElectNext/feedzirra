@@ -72,6 +72,14 @@ def sample_enxt_rcp_feed
   load_sample("enxt_real_clear_politics.xml")
 end
 
+def sample_enxt_dmn_feed
+  load_sample("enxt_dallas_morning_news.xml")
+end
+
+def sample_enxt_dmn_blog_feed
+  load_sample("enxt_dallas_morning_news_blog.xml")
+end
+
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true

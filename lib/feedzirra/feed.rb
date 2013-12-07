@@ -47,7 +47,7 @@ module Feedzirra
       # Custom Enxt classes need to be loaded first
       #@feed_classes ||= [Feedzirra::Parser::EnxtRCP, Feedzirra::Parser::RSSFeedBurner, Feedzirra::Parser::GoogleDocsAtom, Feedzirra::Parser::AtomFeedBurner, Feedzirra::Parser::Atom, Feedzirra::Parser::ITunesRSS, Feedzirra::Parser::RSS]
       # same as above, minus itunes for now, as Feedzirra is crashing on certain feeds that have itunes podcast links in the opening rss tag
-      @feed_classes ||= [Feedzirra::Parser::EnxtRCP, Feedzirra::Parser::RSSFeedBurner, Feedzirra::Parser::GoogleDocsAtom, Feedzirra::Parser::AtomFeedBurner, Feedzirra::Parser::Atom, Feedzirra::Parser::RSS]
+      @feed_classes ||= [Feedzirra::Parser::EnxtDMN,Feedzirra::Parser::EnxtRCP, Feedzirra::Parser::RSSFeedBurner, Feedzirra::Parser::GoogleDocsAtom, Feedzirra::Parser::AtomFeedBurner, Feedzirra::Parser::Atom, Feedzirra::Parser::RSS]
     end
     
     # Makes all registered feeds types look for the passed in element to parse.
